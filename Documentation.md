@@ -64,7 +64,9 @@ To Configure Dynamic Analyzer we need 4 things.
 ### Steps to Follow
 
 * Open VirtualBox, Go to **File -> Import Appliance** and select the MobSF_VM_X.X.ova file.
+  
   ![Importing MobSF VM ova file](https://cloud.githubusercontent.com/assets/4301109/9768972/cbdd115e-5744-11e5-88dc-bf280df3a963.png)
+
 * Accept the GPL3 Licence and Complete the import process. Do not alter anything.
 * Once the OVA is Imported Successfully, you will see a new entry in VirtualBox named MobSF_VM_X.X
 * Right Click MobSF VM and Choose Settings, Go to Network tab. Here we need to configure two Network Adapters.
@@ -94,22 +96,23 @@ To Configure Dynamic Analyzer we need 4 things.
 
     ![ifconfig example in mac](https://cloud.githubusercontent.com/assets/4301109/9769553/88bb329e-5748-11e5-9e91-3d14db839771.png)
     
-* Go to Wi-Fi Settings in MobSF VM and set the Proxy IP as the Host/Proxy IP which you obtained in the previous step and port no as `1337`.
+* Go to Wi-Fi Settings in **MobSF VM** and set the Proxy IP as the Host/Proxy IP which you have obtained from the previous step and port no as `1337`.
 
-![Proxy Settings in VM](https://cloud.githubusercontent.com/assets/4301109/9769738/92961788-5749-11e5-98ac-26488ca46516.png)
+  ![Proxy Settings in VM](https://cloud.githubusercontent.com/assets/4301109/9769738/92961788-5749-11e5-98ac-26488ca46516.png)
 
-* Save the settings and Navigate to the Home Screen of the MobSF VM. Wait for 30 Seconds and save a snapshot of the MobSF VM in VirtualBox
+* Save the settings and Navigate to the Home Screen of  **MobSF VM**. Wait for 30 seconds and save a snapshot of the **MobSF VM** in VirtualBox
 
-![Saving MobSF VM Snapshot](https://cloud.githubusercontent.com/assets/4301109/9769841/26555556-574a-11e5-9de2-c7eb8b0f30bf.png)
+  ![Saving MobSF VM Snapshot](https://cloud.githubusercontent.com/assets/4301109/9769841/26555556-574a-11e5-9de2-c7eb8b0f30bf.png)
 
-* Once the Snapshot is saved, right click MobSF VM and select `Show in Explorer` or `Show in Finder`.
-
-[https://cloud.githubusercontent.com/assets/4301109/9769901/83c30b3e-574a-11e5-8f90-6ac02732429a.png](Show VM Files)
+* Once the Snapshot is saved, right click **MobSF VM** and select `Show in Explorer` or `Show in Finder`.
+ 
+ ![Show VM Files](https://cloud.githubusercontent.com/assets/4301109/9769901/83c30b3e-574a-11e5-8f90-6ac02732429a.png)
 
 * Open the File **MobSF_VM_X.X.vbox** in any Text Editor and note down the VM UUID and Snapshot UUID
 
-![Getting VM UUID and Snapshot UUID](https://cloud.githubusercontent.com/assets/4301109/9769959/e9d9bb0c-574a-11e5-8005-730306445be9.png) 
-Here `uuid` is the VM UUID and `currentSnapshot` is the Snapshot UUID.
+ ![Getting VM UUID and Snapshot UUID](https://cloud.githubusercontent.com/assets/4301109/9769959/e9d9bb0c-574a-11e5-8005-730306445be9.png) 
+  
+  Here the value of `uuid` is the **VM UUID** and `currentSnapshot` is the **Snapshot UUID**.
 
 * Now we have all the things needed to configure the Dynamic Analyzer (Host/Proxy IP, VM IP, VM UUID and Snapshot UUID)
 
@@ -120,8 +123,8 @@ Here `uuid` is the VM UUID and `currentSnapshot` is the Snapshot UUID.
   * VM_IP = VM IP
   * PROXY_IP = Host/Proxy IP 
   
-  A sample configuration is shown below
+* A sample configuration is shown below
+
   ![Settings](https://cloud.githubusercontent.com/assets/4301109/9770080/9490e8f4-574b-11e5-9548-a2b138ab4155.png)
-  
   
 * Finally start the server.
