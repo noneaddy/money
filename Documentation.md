@@ -53,7 +53,7 @@ If everything goes right, you will get an output like the one below.
 
 ## Configuring Dynamic Analyzer
 
-Dynamic Anlayzer is available only for Android binaries (APK) and works only if your computer has at least 4GB of RAM and Full Virtualisation support.
+Dynamic Anlayzer is available only for Android binaries (APK) and works only if your computer has at least 4GB of RAM and Full Virtualization support.
 
 To Configure Dynamic Analyzer we need 4 things.
 * VM UUID
