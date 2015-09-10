@@ -17,7 +17,7 @@
 ##Download
 
 * Download latest release of MobSF: [https://github.com/ajinabraham/Mobile-Security-Framework-MobSF/releases](https://github.com/ajinabraham/Mobile-Security-Framework-MobSF/releases)
-* Download MobSF VM 0.1 ova file: [https://goo.gl/CiTB12](https://goo.gl/CiTB12)
+* Download MobSF VM 0.1 ova file: [https://goo.gl/PmLt78](https://goo.gl/PmLt78)
 (Download only if you need Dynamic Analysis)
 
 ##Installation
@@ -67,7 +67,7 @@ To Configure Dynamic Analyzer we need 4 things.
   
   ![Importing MobSF VM ova file](https://cloud.githubusercontent.com/assets/4301109/9768972/cbdd115e-5744-11e5-88dc-bf280df3a963.png)
 
-* Accept the GPL3 Licence and Complete the import process. Do not alter anything.
+* Proceed with the import process. Do not alter anything.
 * Once the OVA is Imported Successfully, you will see a new entry in VirtualBox named MobSF_VM_X.X
 * Right Click MobSF VM and Choose Settings, Go to Network tab. Here we need to configure two Network Adapters.
   
