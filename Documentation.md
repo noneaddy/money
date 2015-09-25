@@ -37,7 +37,7 @@ Install MobSF Python dependencies using **pip**
 **NOTE**: If pip.exe is not available in Scripts directory, Download and Re-install latest Python2.7.
 
 #### Unix
-`pip.exe install -r requirements.txt`
+`pip install -r requirements.txt`
 
 ## Running MobSF
 
