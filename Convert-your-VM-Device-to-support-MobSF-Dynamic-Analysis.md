@@ -52,4 +52,5 @@ In VM you will see Android Blue Pil, Droidmon, JustTrustMe and RootCloak. enable
 * Once the system has rebooted, go to WiFi settings, check advanced option and under proxy settings choose `Manual` and set the `Proxy hostname` as the IP of the host machine in which MobSF is running. This will be `PROXY_IP` in **MobSF/settings.py**. set `Proxy port` as `1337`. This will be `PORT` in **MobSF/settings.py**.
 
 * You have successfully congfigured the VM/Device with MobSF Dynamic analysis environment.
+
 **NOTE:** If your doing dynamic analysis on Android Device, make sure that Wi-Fi ADB is always turned on.
