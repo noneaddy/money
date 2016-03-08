@@ -1,0 +1,55 @@
+## MobSFy VM/Device
+This document explains about MobSFy-ing your Device or VM.
+
+### Requirements
+* Rooted Android Device / Virtual Machine
+* Supported Platform: Android
+* Supported Versions: Android 4.03 - 4.4
+
+###Steps for configuring VM/ Android Device for MobSF Dynamic Analysis
+* Reset the Device/VM
+* Insert a SIM in case of Device (optional)
+* Root your Device/VM
+* Download [Root Checker](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck&hl=en) from PlayStore and see if root is installed properly. After verification, you can remove Root Checker.
+* If you are using SuperSU, configure it to Grant access for all root requests without prompt and also uncheck Re-authentication. If you are using any other root app, configure similar options.
+
+![SuperSU](https://cloud.githubusercontent.com/assets/4301109/13609164/d75cd7fe-e57d-11e5-8067-f3f3f780876c.png)
+
+* From your Device/VM, go to **Settings -> Security** and check the option that says **Unknown Sources**
+* If you are configuring a VM, you have to find out the IP of the VM. If you are using an Android Device, Install [WiFi ADB](https://play.google.com/store/apps/details?id=com.ttxapps.wifiadb&hl=en) from PlayStore and turn it on. It will display the IP and PORT to which adb can connect.
+
+**NOTE:** Make sure that your host running MobSF and the Android Device/VM is connected to same WiFi network and is in the same      network range.
+
+![WiFi ADB](https://cloud.githubusercontent.com/assets/4301109/13609550/6d6ca52a-e57f-11e5-8d45-61d1d523e046.png)
+
+* Run mobsfy.py
+
+`python mobsfy.py`
+Enter the IP and PORT number of the Android Device/VM and press enter. On the next choice, 
+choose **1** if you are configuring a VM or choose **2** for Device. MobSFy Script will configure your Device/VM to support MobSF Dynamic Analysis.
+* Once the script has executed successfully, You will see the Xposed Installer view.
+
+![Xposed Installer](https://cloud.githubusercontent.com/assets/4301109/13609847/b75fdb9c-e580-11e5-9d08-4af5d4ed6784.png)
+
+* From here click on **Framework -> Install/Update** and then click on **OK** to reboot the device.
+
+![Install and Reboot](https://cloud.githubusercontent.com/assets/4301109/13609984/7e05a24a-e581-11e5-89b0-f14f238b8f27.png)
+
+![Reboot](https://cloud.githubusercontent.com/assets/4301109/13610013/9f0ed812-e581-11e5-8a05-80abf20ee509.png)
+
+* After Rebooting, open Xposed Installer and go to Modules.
+
+In Device you will see Droidmon, JustTrustMe and RootCloak. enable all of these modules.
+
+![Xposed Modules](https://cloud.githubusercontent.com/assets/4301109/13610110/26f0a2b0-e582-11e5-86e3-6716260e82c2.png)
+
+In VM you will see Android Blue Pil, Droidmon, JustTrustMe and RootCloak. enable all of these modules.
+
+![Xposed on Device](https://cloud.githubusercontent.com/assets/4301109/13610315/0e295b04-e583-11e5-8556-de9aa83ae733.png)
+
+* After enabling these modules, reboot your VM/Device.
+
+* Once the system has rebooted, go to WiFi settings, check advanced option and under proxy settings choose `Manual` and set the `Proxy hostname` as the IP of the host machine in which MobSF is running. This will be `PROXY_IP` in **MobSF/settings.py**. set `Proxy port` as `1337`. This will be `PORT` in **MobSF/settings.py**.
+
+* You have successfully congfigured the VM/Device with MobSF Dynamic analysis environment.
+**NOTE:** If your doing dynamic analysis on Android Device, make sure that Wi-Fi ADB is always turned on.
