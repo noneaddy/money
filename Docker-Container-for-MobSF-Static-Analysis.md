@@ -3,8 +3,10 @@
 Dockefile is available here: https://github.com/ajinabraham/Mobile-Security-Framework-MobSF/blob/master/Dockerfile
 
 ```
+
 docker build -t mobsf_docker .
-docker run -i -t mobsf_docker
+docker run -i -t opensecurity/mobsf:latest
+
 ```
 
 This will run MobSF at 0.0.0.0:8000
