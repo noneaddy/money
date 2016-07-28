@@ -5,7 +5,7 @@ Dockefile is available here: https://github.com/ajinabraham/Mobile-Security-Fram
 ```
 
 docker build -t mobsf_docker .
-docker run -i -t opensecurity/mobsf:latest
+docker run -i -t -p 8000:8000 opensecurity/mobsf:latest
 
 ```
 
@@ -16,4 +16,5 @@ This will run MobSF at 0.0.0.0:8000
 https://hub.docker.com/r/opensecurity/mobsf/
 ```
 docker pull opensecurity/mobsf
+docker run -i -t -p 8000:8000 opensecurity/mobsf:latest
 ```
