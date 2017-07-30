@@ -22,17 +22,20 @@ file | `multipart/form-data` | Yes
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
+  * **Code:** `200` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{"file_name": "diva-beta.apk", "hash": "82ab8b2193b3cfb1c737e3a786be363a", "scan_type": "apk"}`
  
 * **Error Response:**
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : <error message> }`
 
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 * **Sample Call:**
@@ -63,7 +66,8 @@ re_scan | 0 or 1, default is 0 | No
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
+  * **Code:** `200` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** 
    ```
    {"act_count": "17", "api": {"Loading Native Code (Shared Library) ": {"path": 
@@ -79,11 +83,13 @@ re_scan | 0 or 1, default is 0 | No
 * **Error Response:**
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : <error message> }`
 
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 * **Sample Call:**
@@ -111,18 +117,20 @@ hash | hash of the scan | Yes
 
 * **Success Response:**
 
-  * **Code:** 200 <br />
-    **Content:** `{"deleted": "yes"}`
-    **Content:** `{"deleted": "no"}`
+  * **Code:** `200` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
+    **Content:** `{"deleted": "yes"}` or `{"deleted": "no"}`
 
 * **Error Response:**
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : <error message> }`
 
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{ error : "You are unauthorized to make this request." }`
 
 * **Sample Call:**
@@ -131,3 +139,42 @@ hash | hash of the scan | Yes
   curl -X POST --url http://localhost:8000/api/v1/delete_scan --data "hash=82ab8b2193b3cfb1c737e3a786be363a"
   ```
 <hr>
+
+**Generate PDF Report API**
+----
+API to generate PDF Report
+
+* **URL:** `/api/v1/download_pdf`
+
+* **Method:** `POST`
+  
+*  **Data Params**
+
+Param Name | Param Value | Required
+---------- | ----------- | --------
+hash | hash of the scan | Yes
+scan_type| apk, zip, ipa, or appx | Yes
+
+* **Success Response:**
+
+  * **Code:** `200` <br />
+    **Content-Type:**  `application/pdf` <br />
+    **Content:** `PDF Contents`
+
+* **Error Response:**
+
+  * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
+    **Content:** `{ error : <error message> }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content-Type:**  `application/json; charset=utf-8` <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+
+* **Sample Call:**
+
+  ```
+  curl -X POST --url http://localhost:8000/api/v1/download_pdf --data "hash=82ab8b2193b3cfb1c737e3a786be363a&scan_type=apk"
+  ```
