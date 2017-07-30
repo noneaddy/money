@@ -11,9 +11,9 @@
 API to upload a file. Supported file types are apk, zip, ipa and appx.
 
 * **URL:** `/api/v1/upload`
-
 * **Method:** `POST`
-  
+* **Header:** `Authorization:<api_key>`
+
 *  **Data Params**
 
 Param Name | Param Value | Required
@@ -50,8 +50,8 @@ file | `multipart/form-data` | Yes
 API to scan a file that is already uploaded.
 
 * **URL:** `/api/v1/scan`
-
 * **Method:** `POST`
+* **Header:** `Authorization:<api_key>`
   
 *  **Data Params**
 
@@ -105,8 +105,8 @@ re_scan | 0 or 1, default is 0 | No
 API to delete scan results.
 
 * **URL:** `/api/v1/delete_scan`
-
 * **Method:** `POST`
+* **Header:** `Authorization:<api_key>`
   
 *  **Data Params**
 
@@ -144,9 +144,9 @@ hash | hash of the scan | Yes
 API to generate PDF Report
 
 * **URL:** `/api/v1/download_pdf`
-
 * **Method:** `POST`
-  
+* **Header:** `Authorization:<api_key>`
+
 *  **Data Params**
 
 Param Name | Param Value | Required
