@@ -41,7 +41,8 @@ file | `multipart/form-data` | Yes
 * **Sample Call:**
 
   ```
-  curl -F 'file=@/Users/ajin/Desktop/diva-beta.apk' http://localhost:8000/api/v1/upload
+  curl -F 'file=@/Users/ajin/Desktop/diva-beta.apk' http://localhost:8000/api/v1/upload -H 
+  "Authorization:563d64fc5054d3b239ac0419f1d6b2378465f5c80e1778c283eb1e3265bdd7ae"
   ```
 <hr>
 
@@ -96,7 +97,8 @@ re_scan | 0 or 1, default is 0 | No
 
   ```
   curl -X POST --url http://localhost:8000/api/v1/scan --data "scan_type=apk&file_name=diva-
-  beta.apk&hash=82ab8b2193b3cfb1c737e3a786be363a"
+  beta.apk&hash=82ab8b2193b3cfb1c737e3a786be363a" -H 
+  "Authorization:563d64fc5054d3b239ac0419f1d6b2378465f5c80e1778c283eb1e3265bdd7ae"
   ```
 
 <hr>
@@ -136,7 +138,8 @@ hash | hash of the scan | Yes
 * **Sample Call:**
 
   ```
-  curl -X POST --url http://localhost:8000/api/v1/delete_scan --data "hash=82ab8b2193b3cfb1c737e3a786be363a"
+  curl -X POST --url http://localhost:8000/api/v1/delete_scan --data "hash=82ab8b2193b3cfb1c737e3a786be363a" -H 
+  "Authorization:563d64fc5054d3b239ac0419f1d6b2378465f5c80e1778c283eb1e3265bdd7ae"
   ```
 <hr>
 
