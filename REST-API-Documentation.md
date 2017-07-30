@@ -30,13 +30,13 @@ file | `multipart/form-data` | Yes
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : <error message> }`
+    **Content:** `{"error": <error message> }`
 
   OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** `401 UNAUTHORIZED` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
+    **Content:** `{"error": "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
@@ -84,13 +84,13 @@ re_scan | 0 or 1, default is 0 | No
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : <error message> }`
+    **Content:** `{"error": <error message> }`
 
   OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** `401 UNAUTHORIZED` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
+    **Content:** `{"error": "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
@@ -125,13 +125,13 @@ hash | hash of the scan | Yes
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : <error message> }`
+    **Content:** `{"error": <error message> }`
 
   OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** `401 UNAUTHORIZED` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
+    **Content:** `{"error": "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
@@ -165,13 +165,13 @@ scan_type| apk, zip, ipa, or appx | Yes
 
   * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : <error message> }`
+    **Content:** `{"error": <error message> }`
 
   OR
 
-  * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** `401 UNAUTHORIZED` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
+    **Content:** `{"error": "You are unauthorized to make this request." }`
 
 * **Sample Call:**
 
