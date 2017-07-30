@@ -34,7 +34,7 @@ file | `multipart/form-data` | Yes
 
   OR
 
-  * **Code:** `401 UNAUTHORIZED` <br />
+  * **Code:** `401 Unauthorized` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{"error": "You are unauthorized to make this request." }`
 
@@ -88,7 +88,7 @@ re_scan | 0 or 1, default is 0 | No
 
   OR
 
-  * **Code:** `401 UNAUTHORIZED` <br />
+  * **Code:** `401 Unauthorized` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{"error": "You are unauthorized to make this request." }`
 
@@ -129,7 +129,7 @@ hash | hash of the scan | Yes
 
   OR
 
-  * **Code:** `401 UNAUTHORIZED` <br />
+  * **Code:** `401 Unauthorized` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{"error": "You are unauthorized to make this request." }`
 
@@ -169,7 +169,7 @@ scan_type| apk, andzip, ioszip, ipa, or appx | Yes
 
   OR
 
-  * **Code:** `401 UNAUTHORIZED` <br />
+  * **Code:** `401 Unauthorized` <br />
     **Content-Type:**  `application/json; charset=utf-8` <br />
     **Content:** `{"error": "You are unauthorized to make this request." }`
 
