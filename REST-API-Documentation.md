@@ -8,9 +8,9 @@
 
 **Upload File API**
 ----
-API to upload a file. Supported file types are apk, zip, ipa and appx
+API to upload a file. Supported file types are apk, zip, ipa and appx.
 
-* **URL:** api/v1/upload
+* **URL:** `/api/v1/upload`
 
 * **Method:** `POST`
   
@@ -46,7 +46,7 @@ file | `multipart/form-data` | Yes
 ----
 API to scan a file that is already uploaded.
 
-* **URL:** api/v1/scan
+* **URL:** `/api/v1/scan`
 
 * **Method:** `POST`
   
@@ -92,3 +92,42 @@ re_scan | 0 or 1, default is 0 | No
   curl -X POST --url http://localhost:8000/api/v1/scan --data "scan_type=apk&file_name=diva-
   beta.apk&hash=82ab8b2193b3cfb1c737e3a786be363a"
   ```
+
+<hr>
+
+**Delete Scan API**
+----
+API to delete scan results.
+
+* **URL:** `/api/v1/delete_scan`
+
+* **Method:** `POST`
+  
+*  **Data Params**
+
+Param Name | Param Value | Required
+---------- | ----------- | --------
+hash | hash of the scan | Yes
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{"deleted": "yes"}`
+    **Content:** `{"deleted": "no"}`
+
+* **Error Response:**
+
+  * **Code:**  `500 Internal Server Error` or  `405 Method Not Allowed` or `422 Unprocessable Entity` <br />
+    **Content:** `{ error : <error message> }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "You are unauthorized to make this request." }`
+
+* **Sample Call:**
+
+  ```
+  curl -X POST --url http://localhost:8000/api/v1/delete_scan --data "hash=82ab8b2193b3cfb1c737e3a786be363a"
+  ```
+<hr>
