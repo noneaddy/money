@@ -1,9 +1,9 @@
 **MobSF REST APIs**
 
-1. `api/v1/upload` - Upload a File
-2. `api/v1/scan` - Scan a File
-3. `api/v1/delete_scan` - Delete a Scan
-4. `api/v1/download_pdf` - Download PDF Report
+1. `api/v1/upload` - [Upload a File](#upload-file-api)
+2. `api/v1/scan` - [Scan a File](#scan-file-api)
+3. `api/v1/delete_scan` - [Delete a Scan](#delete-scan-api)
+4. `api/v1/download_pdf` - [Download PDF Report](#generate-pdf-report-api)
 
 
 **Upload File API**
