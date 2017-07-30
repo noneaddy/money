@@ -58,7 +58,7 @@ API to scan a file that is already uploaded.
 
 Param Name | Param Value | Required
 ---------- | ----------- | --------
-scan_type | apk, zip, ipa, appx | Yes
+scan_type | apk, zip, ipa, or appx | Yes
 file_name | Name of the app with extension | Yes
 hash | hash of the scan | Yes
 re_scan | 0 or 1, default is 0 | No
@@ -153,7 +153,7 @@ API to generate PDF Report
 Param Name | Param Value | Required
 ---------- | ----------- | --------
 hash | hash of the scan | Yes
-scan_type| apk, zip, ipa, or appx | Yes
+scan_type| apk, andzip, ioszip, ipa, or appx | Yes
 
 * **Success Response:**
 
