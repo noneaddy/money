@@ -8,4 +8,4 @@
 * Do add necessary commments so that others can work with your contribution later.
 * Add unit tests if possible.
 * Always run the existing unit tests and make sure your contributions won't break any existing functionality.
-* Write code with multiple platform in mind. We support Windows, Mac and Linux.
+* Write code with multiple platform in mind and test your code and unit tests in Windows, Mac and Linux.
