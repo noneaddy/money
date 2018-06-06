@@ -1,1 +1,0 @@
-Example API calls with python requests: [Gist](https://gist.github.com/ajinabraham/0f5de3b0c7b7d3665e54740b9f536d81)
