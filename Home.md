@@ -1,1 +1,1 @@
-Welcome to the Mobile-Security-Framework-MobSF wiki!
+New Documentation Website: https://mobsf.github.io/docs
